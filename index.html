@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>MilkIce Sorvetes</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <nav class="navBar">
+            <img src="src/images/Logo.png" alt="Logo MilkIce" class="logo">
+
+            <button class="btn btn-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul id="nav-links">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="/src/pages/conhecer.html">Produtos</a>
+                </li>
+                <li>
+                    <a onclick="goToAbout()" href="#about">Sobre nós</a>
+                </li>
+            </ul>
+
+            <a href="https://wa.me/5537999231622" class="btn btn-default" target="_blank"
+                aria-label="Contatar pelo WhatsApp">
+                Contatar
+            </a>
+        </nav>
+    </header>
+    <!--FIM HEADER-->
+    <!--MAIN-->
+    <main id="conteiner">
+        <section id="home">
+
+            <h1 class="home-title">
+                Mais que Sorvete, uma
+                <span>experiência.</span>
+            </h1>
+            <p class="home-description">
+                Descubra Sorvetes icônicos, sabores únicos e a
+                energia perfeita para cada parte do seu dia.
+            </p>
+            <div class="home-actions">
+                <a href="./src/pages/conhecer.html" class="btn btn-default">
+                    Conhecer Produtos
+                </a>
+                <a href="https://wa.me/5537999231622" class="btn btn-outlied" target="_blank"
+                    aria-label="Contatar pelo WhatsApp">
+                    Entrar em Contato
+                </a>
+            </div>
+
+        </section>
+        <section id="carrocel">
+            <h2 class="titulo-sabores">VEJA TODOS NOSSOS SABORES</h2>
+
+            <div class="carrossel-container">
+
+                <!-- seta esquerda -->
+                <button class="seta esquerda" onclick="scrollLeft()">‹</button>
+
+                <!-- ÁREA DESLIZÁVEL -->
+                <div class="carrossel" id="carrosselSabores">
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F8E7C8">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Ninho Trufado</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#6A4A2F">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Ferrero Rocher</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#FF6B86">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Morango</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#4A2C1A">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Chocolate</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#5A3A28">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Nutella</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#8B522C">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Ovomaltine</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F2F5F7">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Milk Premium</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#C7A98A">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Capucino</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#5C3A25">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Brigadeiro</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#3A1F13">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Chocolate Dubai</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#3E1A23">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Floresta Negra</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F8F6EF">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Laka</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#EFE8DA">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Rafaello</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F7D8DD">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Ninho com Morango</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#C5E07A">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Ouro Verde</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F8E1B2">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Bem Casado</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#E5C9A6">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Biscoito</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F4B6C4">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Segredo de Amor</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#FFF3D6">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Leite Condensado</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F5DDA8">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Pudim</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F9F9F4">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Coco</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#D8B98A">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Coco Queimado</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F1E58A">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Milho Verde</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#E2C279">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Sonho de Mel</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#FCECC9">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Creme</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#59C2A1">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Choco-Menta</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F9D56E">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Maracujá Trufado</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#B56777">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Dois Amores</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#6E4A3F">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Passas ao Rum</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#7A2341">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Uva ao Vinho</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#C88F4F">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Doce
+                            de
+                            Leite</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F0667C">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Romeu
+                            e
+                            Julieta</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F9EADF">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Beijinho</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F6F6F4">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Flocos</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#7D4E80">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Olho
+                            de
+                            Sogra</span>
+                    </div>
+
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F7F1ED">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Iorgute</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#FF9DBB">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Danoninho</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#FF7BD7">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Chiclete</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#5DB5FF">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Blue
+                            Ice</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#FAD95B">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Maracujá</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#E0F3A0">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Mouse
+                            de
+                            Limão</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F8EFA1">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Abacaxi</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#F7E28A">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Banana</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#8BCF4F">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Kiwi</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#A0C07C">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Pistache</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#98E26F">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Maça
+                            Verde</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#6F2A8E">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Uva</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#FF8A7A">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Goiaba</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#3A0E35">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Açaí
+                            Cremoso</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#2A0526">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Açaí
+                            Natural</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#6E2D68">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Açaí
+                            com
+                            Morango</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#4C234C">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Açaíwey</span>
+                    </div>
+
+                    <div class="sabor-card">
+                        <div class="bola" data-color="#341333">
+                            <img src="src/images/a2FQgx01.svg" class="icone-sabor">
+                        </div>
+                        <span>Açaí
+                            Zero</span>
+                    </div>
+                </div>
+
+                <!-- seta direita -->
+                <button class="seta direita" onclick="scrollRight()">›</button>
+
+            </div>
+        </section>
+        <section id="sobre">
+                <h2 class="sobre">
+                    SOBRE NÓS
+                </h2>
+
+            <div class="div-sobre">
+                <h4 class="titulo sobre">
+                    De um sonho à realidade…
+                </h4>
+                <p class="historia">
+                    Thiago Henrique, oriundo de uma família pobre e humilde, nascido nos anos 80,
+                    hoje casado com Lília Maria e pai de três filhos, é cristão e servo de Deus.
+                    Sempre teve o sonho de ter seu próprio negócio: “uma fábrica de sorvete artesanal”. <br>
+                    Nos anos 90, ainda criança, na grande BH, tudo começou. Foram iniciadas as primeiras vendas de
+                    picolé e chup-chup na rua.
+                    Alguns anos depois, sua mãe passou a fabricar seu próprio chup-chup para vender. <br>
+                    O ponto estratégico ficava na Avenida Portugal, bairro Itapoã, próximo à Lagoa da Pampulha, onde
+                    havia uma grande freguesia. <br>
+                    Em tempos de calor, frio ou chuva, obtinha grandes resultados. Diante de tanto sucesso, surgiu a
+                    ideia de uma fábrica de sorvete.
+                </p><br>
+                <p class="acontecimento">
+                    Com o passar dos anos, em 2022, Thiago abriu seu próprio negócio na cidade de Carmópolis de Minas.
+                    Segundo ele, sua receita é secreta — o sabor dos anos 80 — e o produto possui altíssima qualidade.
+                    <br>
+                    Muito ligado às coisas de Deus, Thiago afirma que sua receita é “do céu”, totalmente instruída por
+                    Deus. <br>
+                    Seu sorvete teve grande aceitação no mercado, a ponto de ser reconhecido pelos clientes como o
+                    melhor sorvete da região 37.
+                    Além disso, o próprio Google, por meio das avaliações no Google Maps, também o destacou como o
+                    melhor sorvete da região. <br>
+                </p> <br>
+                <p class="conclusao">
+                    Thiago diz alcançar grande sucesso pela graça de Deus. Suas constantes novidades agregam ainda mais
+                    satisfação aos clientes, sempre renovando a qualidade de seus produtos.
+                    Como afirma: “Sorvete para os mais exigentes paladares.”
+                </p> <br>
+                <h4 class="mensagem-titulo">
+                    Thiago também deixa uma mensagem:
+                </h4> <br>
+                <h5 class="mensagem">
+                    “Nunca desista dos seus sonhos; pode ser que tenham sido criados por Deus.”
+                </h5>
+
+            </div>
+
+        </section>
+    </main>
+    <!--FIM MAIN-->
+    <!--INICIO FOOTER-->
+    <footer id="footer">
+        <div class="img">
+            <img src="./src/images/Azul.png" alt="Logo">
+        </div>
+        <div class="text">
+            <h5>© 2025 • Desenvolvido por Matheus Carques Developer</h5>
+        </div>
+
+        <div class="contact">
+            <ul class="lista">
+                <li class="instagram">
+                    <a href="https://www.instagram.com/mcarques_dev?igsh=a3ZkcDU4ZmhnbW01"  target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+
+                <li class="zap">
+                    <a href="https://wa.me/5537998044629" target="_blank" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+
+                <li class="linkedin">
+                    <a href="https://www.linkedin.com/in/matheus-carques" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--FIM FOOTER-->
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>

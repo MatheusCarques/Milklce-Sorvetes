@@ -1,0 +1,626 @@
+/* -------------------------------------- */
+/* FONTES & VARIÁVEIS */
+/* -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('../css/variebles.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -------------------------------------- */
+/* CONTAINER PRINCIPAL */
+/* -------------------------------------- */
+#conteiner {
+    background-color: azure;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+/* -------------------------------------- */
+/* BOTÕES */
+/* -------------------------------------- */
+
+a.btn {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-mobile {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+}
+
+.btn-default {
+    background-color: var(--color-brand-3);
+    border: 1px solid var(--color-brand-7);
+    color: var(--color-brand-7);
+}
+
+.btn-default:hover {
+    background-color: var(--color-brand-4);
+}
+
+.btn-outlied {
+    background-color: transparent;
+    color: var(--color-brand-4);
+    border: 1px solid var(--color-brand-4);
+}
+
+.btn-outlied:hover {
+    background-color: var(--color-brand-3);
+    color: var(--color-brand-7);
+}
+
+/* -------------------------------------- */
+/* NAVBAR */
+/* -------------------------------------- */
+
+header {
+    background-color: var(--color-brand-2);
+    padding: 12px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
+}
+
+/* WRAPPER */
+header .navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+header .navBar .logo {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* MENU MOBILE */
+header .navBar ul {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    background-color: var(--color-brand-2);
+    padding: 1rem;
+    z-index: 999;
+}
+
+header .navBar ul.show {
+    display: flex;
+}
+
+/* LINKS DO MENU */
+header .navBar ul li {
+    text-align: center;
+    padding: 8px;
+}
+
+header .navBar ul li a {
+    color: var(--color-brand-7);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+header .navBar ul li a:hover {
+    color: var(--color-brand-4);
+    border-bottom: 1px solid var(--color-brand-4);
+}
+
+/* BOTÃO DESKTOP APARECE NO DESKTOP */
+header .navBar .btn-default {
+    display: none;
+}
+
+/* -------------------------------------- */
+/* NAVBAR – RESPONSIVO DESKTOP */
+/* -------------------------------------- */
+
+@media (min-width: 769px) {
+
+    header .navBar .btn-mobile {
+        display: none;
+    }
+
+    /* MENU NORMAL NO DESKTOP */
+    header .navBar ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        gap: 1rem;
+        width: auto;
+        padding: 0;
+        background: none;
+    }
+
+    header .navBar .btn-default {
+        display: block;
+    }
+}
+
+/* -------------------------------------- */
+/* HOME SECTION */
+/* -------------------------------------- */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-top: clamp(0px, 5vw, 32px);
+}
+
+/* IMAGEM PRINCIPAL */
+#home .home-image {
+    width: clamp(300px, 50%, 400px);
+}
+
+/* TÍTULO */
+#home .home-title {
+    color: var(--color-brand-9);
+    text-align: center;
+    font-size: clamp(3rem, 5vw, 4.3rem);
+    text-transform: uppercase;
+    line-height: 1.2;
+    max-width: 700px;
+}
+
+#home .home-title span {
+    color: var(--color-brand-4);
+}
+
+/* DESCRIÇÃO */
+#home .home-description {
+    color: var(--color-brand-9);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    max-width: 600px;
+}
+
+/* BOTÕES HOME */
+#home .home-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* ====== SEÇÃO CARROCEL ====== */
+
+#carrocel {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#carrocel .titulo-sabores {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 700;
+    color: #0082c8;
+    /* azul harmônico com seu layout */
+    margin-bottom: 30px;
+}
+
+
+/* ====== CONTAINER DO CARROSSEL ====== */
+
+/* ====== CONTAINER VISÍVEL (MOSTRA APENAS 4 ITENS) ====== */
+.carrossel-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* ESSENCIAL */
+    padding: 20px 0;
+
+}
+
+/* ====== FAIXA DESLIZÁVEL ====== */
+.carrossel {
+    display: flex;
+    gap: 30px;
+    overflow-x: visible;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 10px;
+    width: 60%;
+    /* <-- MOSTRA EXATAMENTE 4 ITENS */
+    position: relative;
+    z-index: 2000;
+
+}
+
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cada card com largura mínima */
+.sabor-card {
+    min-width: 120px;
+    /* obrigatório para caber só 4 */
+}
+
+
+.sabor-card:hover {
+    transform: scale(1.08);
+}
+
+/* bola colorida do sorvete */
+.bola {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor-sabor);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* impede o SVG de vazar */
+    border: var(--color-brand-9) solid 2px;
+}
+
+
+.icone-sabor {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    /* deixa o SVG branco */
+    opacity: .95;
+}
+
+
+/* ====== SETAS ====== */
+
+/* garante que as setas fiquem acima do carrossel e clicáveis */
+/* ===== SETAS DO CARROSSEL ===== */
+
+.seta {
+
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #00a8e8;
+    background: #ffffff;
+    /* branco sólido */
+    color: #00a8e8;
+    /* azul VISÍVEL */
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s;
+    z-index: 999;
+    /* garante que fica acima de tudo */
+}
+
+
+/* esquerda e direita */
+.seta.esquerda {
+    margin-right: 15px;
+}
+
+.seta.direita {
+    margin-left: 15px;
+}
+
+
+/* hover */
+.seta:hover {
+    background: #00a8e8;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* desabilitada */
+
+
+/* MOBILE = remove setas e deixa apenas scroll */
+@media (max-width: 768px) {
+    .seta {
+        display: none;
+    }
+
+    .seta.disabled {
+        opacity: 0.35;
+        transform: translateY(-50%);
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+#carrocel .titulo-sabores {
+    font-size: 26px;
+}
+
+.sabor-card {
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.bola {
+    width: 70px;
+    height: 70px;
+}
+
+/* -------------------------------------- */
+/* SEÇÃO SOBRE (estilos completos)        */
+/* -------------------------------------- */
+
+/* Container da seção */
+#sobre {
+    position: relative;
+    padding: 60px 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa interna com limite de largura para leitura */
+#sobre .div-sobre {
+    width: 100%;
+    max-width: 990px;
+    background-color: var(--color-brand-1);
+    padding: 10px;
+    border-radius: 14px;
+    display: flexbox;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    align-items: start;
+    border: var(--color-brand-9) solid 2px;
+}
+
+/* Cabeçalhos */
+#sobre .sobre {
+    text-align: center;
+    width: 100%;
+   max-width: 990px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--color-brand-4, #0082c8);
+    /* fallback azul */
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Título secundário */
+#sobre .titulo.sobre {
+    font-size: clamp(1.6rem, 2.8vw, 2rem);
+    color: var(--color-brand-9, );
+    font-weight: 800;
+    line-height: 1.08;
+}
+
+/* Parágrafos principais (historia, acontecimento, conclusao) */
+#sobre .historia,
+#sobre .acontecimento,
+#sobre .conclusao {
+    color: var(--color-brand-7);
+    font-size: clamp(0.95rem, 5vw, 1.05rem);
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 6px;
+}
+
+/* Espaçamento extra entre parágrafos maiores */
+#sobre .historia+.acontecimento,
+#sobre .acontecimento+.conclusao {
+    margin-top: 12px;
+}
+
+/* Mensagem do fundador */
+#sobre .mensagem-titulo {
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
+    font-weight: 700;
+    margin-top: 10px;
+    color: var(--color-brand-4, #0082c8);
+}
+
+#sobre .mensagem {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-brand-9, #222);
+    margin-top: 8px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.02));
+    padding: 14px 18px;
+    border-left: 4px solid var(--color-brand-4, #0082c8);
+    border-radius: 8px;
+}
+
+/* Pequena tipografia para créditos ou observações */
+#sobre small {
+    display: block;
+    color: var(--color-brand-7, #666);
+    margin-top: 8px;
+}
+
+/* RESPONSIVO: layout em duas colunas no desktop */
+@media (min-width: 992px) {
+    #sobre .div-sobre {
+        grid-template-columns: 1fr 360px;
+        gap: 28px;
+    }
+
+    /* Se quiser adicionar later um card lateral (foto / destaque), estiliza aqui */
+    #sobre .div-sobre .lateral {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.02));
+        border-radius: 12px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        min-height: 240px;
+        box-shadow: 0 6px 20px rgba(9, 10, 10, 0.04);
+    }
+
+    #sobre .div-sobre .lateral img {
+        max-width: 100%;
+        border-radius: 8px;
+        display: block;
+    }
+
+    /* Ajustes tipográficos para mais largura */
+    #sobre .historia,
+    #sobre .acontecimento,
+    #sobre .conclusao {
+        font-size: 1rem;
+    }
+}
+
+/* MOBILE: melhorar espaçamento e legibilidade */
+@media (max-width: 768px) {
+    #sobre {
+        padding: 36px 4%;
+    }
+
+    #sobre .div-sobre {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #sobre .sobre {
+        font-size: 1rem;
+    }
+
+    #sobre .titulo.sobre {
+        font-size: 1.4rem;
+    }
+
+    #sobre .mensagem {
+        padding: 12px;
+    }
+}
+
+/* Acessibilidade: contraste e foco */
+#sobre a,
+#sobre a:focus {
+    color: var(--color-brand-1);
+    outline: none;
+    text-decoration: underline;
+}
+
+#sobre :focus {
+    outline: 3px solid rgba(0, 130, 200, 0.12);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* FOOTER */
+#footer {
+    background-color: var(--color-brand-2);
+    color: var(--color-brand-9);
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 99999999999;
+}
+
+/* LOGO */
+#footer .img img {
+    width: 95px;
+    /* tamanho minimalista */
+    height: auto;
+    opacity: 0.9;
+}
+
+/* Texto */
+#footer .text h5 {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-brand-9);
+}
+
+/* Lista de ícones */
+#footer .lista {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links */
+#footer .lista li a {
+    color: var(--color-brand-9);
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover */
+#footer .lista li a:hover {
+    transform: translateY(-3px);
+}
+
+/* Cores individuais */
+#footer .instagram a:hover {
+    color: #e1306c;
+}
+
+#footer .zap a:hover {
+    color: #25d366;
+}
+
+#footer .linkedin a:hover {
+    color: #0a66c2;
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+    #footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+
+    #footer .text h5 {
+        text-align: left;
+    }
+}

@@ -1,0 +1,19 @@
+:root {
+  /* Tons claros (gelo / highlights) */
+  --color-brand-0: #ffffff; /* branco gelo */
+  --color-brand-1: #d8f2ff; /* azul super claro */
+  --color-brand-2: #b0e4ff; /* azul claro mais visível */
+
+  /* Tons médios (cores primárias da marca) */
+  --color-brand-3: #6cc8f2; /* azul claro principal */
+  --color-brand-4: #0095c7; /* azul turquesa da onda */
+  --color-brand-5: #2b6ea9; /* azul médio "ICE" */
+
+  /* Tons escuros (contraste / textos importantes) */
+  --color-brand-6: #18456a; /* azul escuro intermediário */
+  --color-brand-7: #0b2c50; /* azul escuro do "Milk" */
+  --color-brand-8: #071c32; /* quase marinho */
+  --color-brand-9: #04172a; /* azul profundo / sombra */
+
+  /* usar como cores primarias (brand-2) (brand-4) (brand-7) */
+}
